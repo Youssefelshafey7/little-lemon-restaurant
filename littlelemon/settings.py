@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework.authtoken',
+    'LittleLemonAPI',
     # The settings for app updated for the Graded assessment
     'restaurant',
 ]
@@ -72,6 +74,12 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'littlelemon.wsgi.application'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ]
+}
 
 
 # Database
