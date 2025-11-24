@@ -5,4 +5,5 @@ from .models import Menu
 from .models import Booking
 
 
+admin.site.register(Booking)
 admin.site.register(Menu)
